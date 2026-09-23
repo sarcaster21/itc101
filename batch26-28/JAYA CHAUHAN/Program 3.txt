@@ -1,0 +1,94 @@
+#PYTHON CODE FOR QUIZ
+
+# Python Quiz Game
+
+score = 0
+
+print("================================")
+print("       WELCOME TO QUIZ GAME")
+print("================================")
+
+# Question 1
+print("\n1. Which language are you using?")
+print("A. Java")
+print("B. Python")
+print("C. C++")
+print("D. HTML")
+answer = input("Enter your answer: ").upper()
+if answer == "B":
+  print("Correct! ")
+  score += 1
+else:
+  print("Wrong answer!")
+
+# Question 2
+print("\n2. Which symbol is used for comments in Python?")
+print("A. //")
+print("B. <!-- -->")
+print("C. #")
+print("D. **")
+answer = input("Enter your answer: ").upper()
+if answer == "C":
+  print("Correct!")
+  score += 1
+else:
+  print("Wrong answer!")
+
+ # Question 3
+print("\n3. Which function is used to display output?")
+print("A. input()")
+print("B. print()")
+print("C. display()")
+print("D. output()")
+
+answer = input("Enter your answer: ").upper()
+
+if answer == "B":
+  print("Correct!")
+  score += 1
+else:
+   print("Wrong answer!")
+
+ # Question 4
+print("\n4. Which data type stores True or False?")
+print("A.integer")
+print("B. string")
+print("C. boolean")
+print("D.floating value ")
+answer = input("Enter your answer: ").upper()
+
+if answer == "C":
+   print("Correct!")
+   score += 1
+else:
+  print("Wrong answer!")
+
+# Question 5
+print("\n5. Which loop is commonly used to repeat something?")
+print("A. for")
+print("B. if")
+print("C. def")
+print("D. import")
+
+answer = input("Enter your answer: ").upper()
+
+if answer == "A":
+  print("Correct!")
+  score += 1
+else:
+   print("Wrong answer!")
+
+ # Final Result
+print("\n================================")
+print("           RESULT")
+print("================================")
+print("Your score:", score, "/ 5")
+
+if score == 5:
+  print("Excellent! 🎉")
+
+elif score >= 3:
+     print("Good job! 👍")
+
+else:
+   print("Keep practicing! 📚")

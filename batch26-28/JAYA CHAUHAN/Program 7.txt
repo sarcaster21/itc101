@@ -1,0 +1,26 @@
+#Space Launch / NASA Picture of the Day :
+import requests
+
+API_KEY = "DEMO_KEY"
+
+url = "https://api.nasa.gov/planetary/apod"
+
+params = {
+    "api_key": API_KEY
+}
+
+response = requests.get(url, params=params)
+
+if response.status_code == 200:
+    data = response.json()
+
+    print("\n🚀 NASA Picture of the Day")
+    print("Title:", data["title"])
+    print("Date:", data["date"])
+    print("Explanation:")
+    print(data["explanation"])
+
+    print("\nImage/Video:", data["url"])
+
+else:
+    print("Could not get NASA data.")

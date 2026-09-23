@@ -1,0 +1,32 @@
+# Shopping cart code: 
+
+def shopping_cart(items):
+    print("Shopping Cart:")
+# List
+    for item in items:
+        print("-", item)
+ # Set
+    unique_items = set(items)
+    print("\nUnique Items:", unique_items)
+
+    # Dictionary
+    prices = {
+        "Apple": 30,
+        "Milk": 50,
+        "Bread": 40
+    }
+
+    total = 0
+
+    for item in unique_items:
+        total += prices[item]
+
+    # Tuple
+    bill = ("Total Bill", total)
+
+    print("Bill:", bill)
+
+
+items = ["Apple", "Milk", "Bread", ]
+
+shopping_cart(items)

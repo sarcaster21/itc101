@@ -1,0 +1,18 @@
+# Random Color Generator , Get a random color from an API: 
+import requests
+
+url = "https://www.colr.org/json/colors/random/1"
+
+response = requests.get(url)
+
+if response.status_code == 200:
+
+    data = response.json()
+
+    color = data["colors"][0]["hex"]
+
+    print("🎨 Random Color")
+    print("HEX:", "#" + color)
+
+else:
+    print("Could not get color.")

@@ -1,0 +1,26 @@
+# PYTHON CODE FOR SIMPLE CALCULATOR:
+print("Simple Calculator: ")
+num1 = float(input("Enter first number : "))
+num2 = float(input("Enter second number : "))
+num3 = float(input("Enter third number : "))
+num4 = float(input("Enter fourth number : "))
+print("1.Addition ")
+print("2.Subtraction ")
+print("3.Multiplication ")
+print("4.Division : ")
+selection  = input("Enter your selection: ")
+if selection == "1":
+  print("Result =" , num1 + num2 + num3 + num4)
+elif selection =="2":
+    print("Result =", num1 - num2 - num3 - num4)
+elif selection =="3": 
+     print ("Result =", num1 * num2 * num3 * num4 )
+elif selection =="4":
+        if num4 != 0:
+          print("Result=",num3 / num4)
+        else:
+            print("Cannot divide by zero : ")
+else:
+            print("Invalid selection: ")
+         
+
