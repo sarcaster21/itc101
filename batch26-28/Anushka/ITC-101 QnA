@@ -1,0 +1,95 @@
+Ques1. What is UTF-8? 
+
+UTF-8 (Unicode Transformation Format – 8-bit) is a character encoding system used to store and represent text in computers. It can represent letters, numbers, symbols, emojis, and characters from many different languages. 
+
+For example, English uses simple 1-byte characters in UTF-8, while characters from some other languages may use 2–4 bytes. 
+
+Example: 
+
+Hello 😊 can all be stored using UTF-8. 
+
+UTF-8 helps computers correctly store and display text from different languages and symbols. 
+
+ 
+
+Ques2. Pros and Cons of CSV and XLSX 
+
+CSV (Comma-Separated Values) 
+
+A CSV file stores data in the form of rows and columns, with values usually separated by commas. 
+
+Pros: 
+
+Simple and easy to understand. 
+
+Small file size. 
+
+Opens easily in many programs. 
+
+Easy to create and edit. 
+
+Useful for transferring data between different software. 
+
+Cons: 
+
+Cannot store formulas, charts, images, or formatting properly. 
+
+Does not support multiple worksheets. 
+
+Data types may not always be preserved correctly. 
+
+Large or complicated datasets can become difficult to manage. 
+
+XLSX (Excel Spreadsheet) 
+
+XLSX is the standard file format used by Microsoft Excel to store spreadsheet data. 
+
+Pros: 
+
+Supports multiple worksheets in one file. 
+
+Can store formulas and calculations. 
+
+Supports formatting, charts, tables, images, etc. 
+
+Better for organizing and analyzing complex data. 
+
+Can preserve different data types and formulas. 
+
+Cons: 
+
+Usually larger and more complex than CSV. 
+
+Not as convenient for transferring simple data between different systems. 
+
+Some programs may not support all Excel features. 
+
+Can be slower to process when the file is very large. 
+
+ 
+
+Ques3.  Encoding 
+
+Encoding is the process of converting data, especially characters and text, into a format that a computer can store, process, and transmit. 
+
+Computers ultimately work with binary data (0s and 1s). Encoding provides a standard way to represent characters using these values. 
+
+For example, the letter A has a specific numerical representation in common encoding systems. UTF-8 then represents that character using bytes that the computer can store. 
+
+Why is encoding important? 
+
+It allows computers to store text correctly. 
+
+It helps different systems understand the same data. 
+
+It supports different languages and special characters. 
+
+It prevents problems such as displaying �, Ã, or other strange characters when the wrong encoding is used. 
+
+Common types of encoding: 
+
+ASCII – mainly represents basic English characters. 
+
+UTF-8 – supports characters from almost all writing systems and is widely used on the internet. 
+
+Link for the Hugging face acnt- https://huggingface.co/anushehehehe
