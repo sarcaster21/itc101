@@ -1,16 +1,32 @@
-# Country Information API:
-import requests
+import random
 
-country = "India"
+activities = [
+    "Read a book",
+    "Go for a walk",
+    "Listen to music",
+    "Watch a movie",
+    "Draw something",
+    "Clean your room",
+    "Learn something new",
+    "Call a friend",
+    "Do some exercise",
+    "Cook something new"
+]
 
-url = f"https://restcountries.com/v3.1/name/{country}"
-response = requests.get(url)
-if response.status_code == 200 :
-  data = response.json()
-print("Country:", data[0]["name"]["common"])
-print("Capital:", data[0]["capital"][0])
-print("Population:", data[0]["population"])
-print("Region:", data[0]["region"])
-else:
-  print("Country not found")
+types = [
+    "education",
+    "recreational",
+    "social",
+    "relaxation",
+    "creative"
+]
 
+activity = random.choice(activities)
+activity_type = random.choice(types)
+participants = random.randint(1, 4)
+
+print()
+print("Your activity:")
+print(activity)
+print("Type:", activity_type)
+print("Participants:", participants)
