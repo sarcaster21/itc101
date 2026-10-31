@@ -1,0 +1,31 @@
+What is UTF-8?
+UTF-8 stands for unicode transformation format - 8 bit. It is a character encoding system used to represent text in computers.
+For example: The english letter A is represented using 1 byte in UTF-8 while other character requires different number of bytes.
+
+Pros of CSV file
+Simple and easy to read
+Small size
+Easy to import/export
+Works with different programming languages and data analysis tools
+
+Cons of CSV file
+Cannot store formatting
+Cannot store formulas
+Cannot contain multiple worksheets in a single workbook
+Special character causes issues due to incorrect encoding handling
+
+Pros of XLSX
+Supports multiple worksheets
+Supports formulas and calculations
+Allows formatting, charts, filters etc.
+Can preserve different datatypes
+
+Cons of XLSX
+Usually requires more space than CSV
+Requires spreadsheet-compatible software for accurate use
+Complex than CSV
+
+
+What is Encoding?
+It is the process of converting data, specially characters or text, into a specific format that computers can store, process, and transmit.
+Different encoding schemes areL UTF-8, UTF-16, ASCII, ISO-8859-1 
