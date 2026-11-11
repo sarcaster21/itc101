@@ -1,32 +1,201 @@
-# Shopping cart code: 
+# ==========================================
+#       PARKING LOT MANAGEMENT SYSTEM
+# ==========================================
 
-def shopping_cart(items):
-    print("Shopping Cart:")
-# List
-    for item in items:
-        print("-", item)
- # Set
-    unique_items = set(items)
-    print("\nUnique Items:", unique_items)
-
-    # Dictionary
-    prices = {
-        "Apple": 30,
-        "Milk": 50,
-        "Bread": 40
-    }
-
-    total = 0
-
-    for item in unique_items:
-        total += prices[item]
-
-    # Tuple
-    bill = ("Total Bill", total)
-
-    print("Bill:", bill)
+# Dictionary to store parked vehicles
+# Key   = Parking slot
+# Value = Vehicle information
+parking_slots = {}
 
 
-items = ["Apple", "Milk", "Bread", ]
+# Total number of parking slots
+TOTAL_SLOTS = 10
 
-shopping_cart(items)
+
+# Function to display available slots
+def display_slots():
+
+    print("\n========== PARKING SLOTS ==========")
+
+    for slot in range(1, TOTAL_SLOTS + 1):
+
+        if slot in parking_slots:
+            print("Slot", slot, ": Occupied")
+        else:
+            print("Slot", slot, ": Available")
+
+
+# Function to park a vehicle
+def park_vehicle():
+
+    # Check whether parking is full
+    if len(parking_slots) == TOTAL_SLOTS:
+        print("\nParking lot is full!")
+        return
+
+    vehicle_number = input("Enter vehicle number: ").upper()
+    vehicle_type = input("Enter vehicle type (Car/Bike): ").capitalize()
+
+    # Check if vehicle is already parked
+    for slot, vehicle in parking_slots.items():
+
+        if vehicle["number"] == vehicle_number:
+            print("This vehicle is already parked.")
+            return
+
+    # Find first available slot
+    for slot in range(1, TOTAL_SLOTS + 1):
+
+        if slot not in parking_slots:
+
+            parking_slots[slot] = {
+                "number": vehicle_number,
+                "type": vehicle_type
+            }
+
+            print("\nVehicle parked successfully!")
+            print("Vehicle Number :", vehicle_number)
+            print("Vehicle Type   :", vehicle_type)
+            print("Parking Slot   :", slot)
+
+            return
+
+
+# Function to remove a vehicle
+def remove_vehicle():
+
+    vehicle_number = input("Enter vehicle number to remove: ").upper()
+
+    for slot, vehicle in parking_slots.items():
+
+        if vehicle["number"] == vehicle_number:
+
+            # Calculate parking fee
+            hours = float(input("Enter parking duration in hours: "))
+
+            if vehicle["type"] == "Car":
+                rate = 50
+            elif vehicle["type"] == "Bike":
+                rate = 20
+            else:
+                rate = 30
+
+            fee = hours * rate
+
+            print("\n========== PARKING BILL ==========")
+            print("Vehicle Number :", vehicle["number"])
+            print("Vehicle Type   :", vehicle["type"])
+            print("Parking Slot   :", slot)
+            print("Duration       :", hours, "hours")
+            print("Rate           : ₹", rate, "/hour")
+            print("Total Fee      : ₹", fee)
+
+            # Remove vehicle from parking
+            del parking_slots[slot]
+
+            print("\nVehicle removed successfully!")
+
+            return
+
+    print("Vehicle not found.")
+
+
+# Function to search for a vehicle
+def search_vehicle():
+
+    vehicle_number = input("Enter vehicle number to search: ").upper()
+
+    for slot, vehicle in parking_slots.items():
+
+        if vehicle["number"] == vehicle_number:
+
+            print("\n========== VEHICLE FOUND ==========")
+            print("Vehicle Number :", vehicle["number"])
+            print("Vehicle Type   :", vehicle["type"])
+            print("Parking Slot   :", slot)
+
+            return
+
+    print("Vehicle not found.")
+
+
+# Function to display all parked vehicles
+def display_parked_vehicles():
+
+    if len(parking_slots) == 0:
+
+        print("\nNo vehicles are currently parked.")
+        return
+
+    print("\n========== PARKED VEHICLES ==========")
+
+    for slot, vehicle in parking_slots.items():
+
+        print(
+            "Slot:", slot,
+            "| Vehicle:", vehicle["number"],
+            "| Type:", vehicle["type"]
+        )
+
+
+# Function to display parking statistics
+def parking_statistics():
+
+    occupied = len(parking_slots)
+    available = TOTAL_SLOTS - occupied
+
+    print("\n========== PARKING STATISTICS ==========")
+    print("Total Slots     :", TOTAL_SLOTS)
+    print("Occupied Slots  :", occupied)
+    print("Available Slots :", available)
+
+
+# ==========================================
+#             MAIN PROGRAM
+# ==========================================
+
+while True:
+
+    print("\n========================================")
+    print("       PARKING LOT MANAGEMENT SYSTEM")
+    print("========================================")
+
+    print("1. Display Parking Slots")
+    print("2. Park Vehicle")
+    print("3. Remove Vehicle")
+    print("4. Search Vehicle")
+    print("5. Display Parked Vehicles")
+    print("6. Parking Statistics")
+    print("7. Exit")
+
+    try:
+
+        choice = int(input("\nEnter your choice: "))
+
+        if choice == 1:
+            display_slots()
+
+        elif choice == 2:
+            park_vehicle()
+
+        elif choice == 3:
+            remove_vehicle()
+
+        elif choice == 4:
+            search_vehicle()
+
+        elif choice == 5:
+            display_parked_vehicles()
+
+        elif choice == 6:
+            parking_statistics()
+
+        elif choice == 7:
+            print("\nThank you for using the Parking Lot Management System!")
+            break
+
+        else:
+            print("Invalid choice! Please select 1-7.")
+
+    except ValueError:
+        print("Please enter a valid number.")
