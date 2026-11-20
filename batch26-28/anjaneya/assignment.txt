@@ -1,0 +1,46 @@
+What is UTF-8?
+UTF-8 is a character encoding system used to store and display text on computers. It supports English, numbers, symbols, and many different languages. It is commonly used on websites and in files.
+
+
+
+2. Pros and Cons of CSV and XLSX
+
+CSV (Comma-Separated Values)
+
+Pros:
+
+Simple and easy to understand.
+Takes less storage space.
+Easy to share and open in different software.
+Works well with large amounts of simple data.
+Can be easily used with Python and other programming languages.
+
+Cons:
+
+Does not support formatting like colors, fonts, or borders.
+Cannot store multiple sheets in one file.
+Does not support formulas, charts, or images.
+Data can sometimes get messed up because of commas or encoding issues.
+
+XLSX (Excel File)
+
+Pros:
+
+Supports multiple sheets in one file.
+Allows formatting, formulas, charts, and tables.
+Better for organizing and presenting data.
+Can use Excel features like sorting, filtering, and calculations.
+Suitable for detailed data analysis and reports.
+
+Cons:
+
+File size is usually larger than CSV.
+Not as simple as CSV for basic data storage.
+Some programs may not support all Excel features.
+Can be slower when working with very large datasets.
+
+
+
+
+What is Encoding?
+Encoding is the process of converting characters or text into a format that a computer can understand and store. Different encoding methods are used to represent different characters. UTF-8 is one of the most commonly used encoding methods.

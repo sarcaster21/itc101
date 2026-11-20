@@ -1,0 +1,15 @@
+#Random advice generator:
+import urllib.request
+import json
+
+url = "https://api.adviceslip.com/advice"
+
+try:
+    response = urllib.request.urlopen(url)
+    data = json.loads(response.read().decode())
+
+    print("Advice:")
+    print(data["slip"]["advice"])
+
+except:
+    print("Could not get advice.")

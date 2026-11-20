@@ -1,0 +1,9 @@
+# Write a program to check if a list contains a palindrome of elements.
+
+list = [1,"abc","abc",1]
+copy_list = list.copy()
+copy_list.reverse()
+if(copy_list == list):
+  print("Palindrome of elements exists: ")
+else:
+  print("Palindrome of elements doesn't exists : ")
